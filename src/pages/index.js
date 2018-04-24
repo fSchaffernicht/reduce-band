@@ -7,7 +7,7 @@ const Wrapper = styled.div`
 `
 
 const StyledLink = styled(Link)`
-  color: pink;
+  color: green;
   font-size: 2rem;
 `
 
