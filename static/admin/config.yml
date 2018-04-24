@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: fSchaffernicht/netlify-test
+  repo: fSchaffernicht/reduce-band
 
 media_folder: static/assets
 public_folder: assets
