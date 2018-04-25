@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: fSchaffernicht/netlify-test
+  repo: fSchaffernicht/reduce-band
 
 media_folder: static/assets
 public_folder: assets
@@ -23,9 +23,8 @@ collections:
     label: Blog
     folder: blog
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { name: slug, label: slug }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title, widget: string }
