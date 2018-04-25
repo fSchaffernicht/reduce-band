@@ -1,8 +1,15 @@
 import React from 'react'
 
 export default ({ data }) => {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
+  console.log('data', data)
+  const { markdownRemark } = data
+
+  if (!markdownRemark) {
+    return <div>no markdownRemark</div>
+  }
+
   const { frontmatter, html } = markdownRemark
+
   return (
     <div className='blog-post-container'>
       <div className='blog-post'>

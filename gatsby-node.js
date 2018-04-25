@@ -26,8 +26,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      console.log('node >>>', node)
       createPage({
-        path: node.frontmatter.path || Math.random() * 100,
+        path: node.frontmatter.path,
         component: blogPostTemplate,
         context: {} // additional data can be passed via context
       })
