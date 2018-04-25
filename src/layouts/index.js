@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import styled, { ThemeProvider } from 'styled-components'
 import theme from './theme'
 
-import Header from '../components/header'
+import Header from '../components/Header'
 import './index.css'
 
 const Wrapper = styled.div`
