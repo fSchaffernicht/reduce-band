@@ -33,6 +33,12 @@ export const pageQuery = graphql`
         path
         title
       }
+      wordCount {
+        paragraphs
+        sentences
+        words
+      }
+      timeToRead
     }
   }
 `

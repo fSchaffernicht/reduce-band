@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import styled, { ThemeProvider } from 'styled-components'
 import theme from './theme'
 
-import Header from '../components/Header'
+import { Header } from '../components'
 import './index.css'
 
 const Wrapper = styled.div`
@@ -18,23 +18,27 @@ const Container = styled.div`
   padding: 0 0.5rem;
 `
 
-const Layout = ({ children, data }) => (
-  <ThemeProvider theme={theme}>
-    <Wrapper>
-      <Helmet
-        title={data.site.siteMetadata.title}
-        meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' }
-        ]}
-      />
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <Container>
-        {children()}
-      </Container>
-    </Wrapper>
-  </ThemeProvider>
-)
+const Layout = (props) => {
+  const { children, data } = props
+  console.log('layout props', props)
+  return (
+    <ThemeProvider theme={theme}>
+      <Wrapper>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: 'sample, something' }
+          ]}
+        />
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <Container>
+          {children()}
+        </Container>
+      </Wrapper>
+    </ThemeProvider>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.func
