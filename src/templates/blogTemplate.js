@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default ({ data }) => {
-  console.log('data', data)
+  console.log('blog template', data)
   const { markdownRemark } = data
 
   if (!markdownRemark) {
@@ -15,6 +15,7 @@ export default ({ data }) => {
       <div className='blog-post'>
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
+        <img src={frontmatter.thumbnail} />
         <div
           className='blog-post-content'
           dangerouslySetInnerHTML={{ __html: html }}
@@ -29,9 +30,10 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         path
         title
+        date(formatString: "MMMM DD, YYYY")
+        thumbnail
       }
       wordCount {
         paragraphs

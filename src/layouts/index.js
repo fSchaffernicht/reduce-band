@@ -14,13 +14,13 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   margin: auto;
-  max-width: 960px;
+  max-width: 760px;
   padding: 0 0.5rem;
 `
 
 const Layout = (props) => {
   const { children, data } = props
-  console.log('layout props', props)
+
   return (
     <ThemeProvider theme={theme}>
       <Wrapper>

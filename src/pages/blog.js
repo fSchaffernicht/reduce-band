@@ -6,23 +6,43 @@ const Wrapper = styled.div`
   padding-bottom: 1rem;
 `
 
+const Info = (props) => {
+  const {
+    words,
+    timeToRead
+  } = props
+
+  return (
+    <div>
+      <span>{words} {words === 1 ? 'Wort' : 'Wörter'}</span>
+      <span>Lesezeit: {timeToRead}</span>
+    </div>
+  )
+}
+
 export default (props) => {
   console.log('props', props)
   const {
     data: { allMarkdownRemark }
-  } = props
+  } = props 
 
   return (
     <div>
       <h1>blog</h1>
       {
         allMarkdownRemark.edges.map((item, index) => {
-          const { node: { frontmatter } } = item
+          const { node: { frontmatter, wordCount, timeToRead } } = item
           return (
             <Wrapper key={index}>
               <Link to={frontmatter.path}>
                 {frontmatter.title}
               </Link>
+              <span>
+                <Info
+                  words={wordCount.words}
+                  timeToRead={timeToRead}
+                />
+              </span>
             </Wrapper>
           )
         })

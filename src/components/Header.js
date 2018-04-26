@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Header = styled.div`
-  background: black;
+  background: ${props => props.theme.color.header};
   padding: 1rem;
   width: 100%;
   position: fixed;

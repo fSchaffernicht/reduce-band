@@ -9,7 +9,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: #232323;
+  background: white;
+  color: #282c34;
 }
 
 * {
