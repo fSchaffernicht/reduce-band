@@ -3,7 +3,7 @@ import { Link } from '../components'
 
 export default () => {
   return (
-    <div>
+    <div className='transition-item detail-page'>
       <h1>about</h1>
     </div>
   )

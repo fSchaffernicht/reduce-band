@@ -33,3 +33,38 @@ p {
   font-size: 16px;
   line-height: 24px;
 }
+
+.transition-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.transition-wrapper .transition-item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.detail-page {
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+}
+ 
+.detail-page.transition-appear {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.detail-page.transition-appear.transition-appear-active {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+.detail-page.transition-leave {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.detail-page.transition-leave.transition-leave-active {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}

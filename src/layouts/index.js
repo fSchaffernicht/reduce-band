@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import PageTransition from 'react-router-page-transition';
 
 import styled, { ThemeProvider } from 'styled-components'
 import theme from './theme'
@@ -35,7 +36,7 @@ const navItems = [
 
 const Layout = (props) => {
   console.log('props', props)
-  const { children, data } = props
+  const { children, data, location } = props
 
   return (
     <ThemeProvider theme={theme}>
@@ -53,7 +54,9 @@ const Layout = (props) => {
             props.location.pathname !== '/' &&
             <Link to='/'>{'< zurück'}</Link>
           }
-          {children()}
+          <PageTransition timeout={200}>
+            {children()}
+          </PageTransition>
         </Container>
       </Wrapper>
     </ThemeProvider>

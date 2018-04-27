@@ -15,7 +15,7 @@ export default ({ data }) => {
   const { frontmatter, html } = markdownRemark
 
   return (
-    <div className='blog-post-container'>
+    <div className='transition-item detail-page'>
       <div className='blog-post'>
         <h1>{frontmatter.title}</h1>
         <StyledDate>{frontmatter.date}</StyledDate>

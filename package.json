@@ -11,10 +11,13 @@
     "gatsby": "^1.9.250",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-netlify-cms": "^2.0.1",
+    "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-source-filesystem": "^1.5.33",
     "gatsby-transformer-remark": "^1.7.40",
     "netlify-cms": "^1.5.0",
     "react-helmet": "^5.2.0",
+    "react-router-page-transition": "^3.1.0",
+    "react-transition-group": "^2.3.1",
     "standard": "^11.0.1",
     "styled-components": "^3.2.6"
   }

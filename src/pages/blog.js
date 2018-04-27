@@ -27,7 +27,7 @@ export default (props) => {
   console.log(allMarkdownRemark)
 
   return (
-    <div>
+    <div className='transition-item detail-page'>
       <h1>blog</h1>
       {
         allMarkdownRemark.edges.map((item, index) => {
