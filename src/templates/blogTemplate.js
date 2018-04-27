@@ -1,8 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
+import { DetailPage, Headline } from '../components'
+
+const Html = styled.div`
+  img {
+    width: 100%;
+  }
+`
+
+const Image = styled.img`
+  margin: 2rem 0;
+  width: 100%;
+`
 
 const StyledDate = styled.div`
-  font-size: 2rem;
+  font-size: 1.5rem;
 `
 
 export default ({ data }) => {
@@ -15,17 +27,12 @@ export default ({ data }) => {
   const { frontmatter, html } = markdownRemark
 
   return (
-    <div className='transition-item detail-page'>
-      <div className='blog-post'>
-        <h1>{frontmatter.title}</h1>
-        <StyledDate>{frontmatter.date}</StyledDate>
-        <img src={frontmatter.thumbnail} />
-        <div
-          className='blog-post-content'
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </div>
-    </div>
+    <DetailPage>
+      <Headline text={frontmatter.title} />
+      <StyledDate>{frontmatter.date}</StyledDate>
+      <Image src={frontmatter.thumbnail} />
+      <Html dangerouslySetInnerHTML={{ __html: html }} />
+    </DetailPage>
   )
 }
 

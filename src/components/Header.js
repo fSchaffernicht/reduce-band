@@ -1,37 +1,71 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Link } from './'
 
 const Header = styled.div`
   padding: 2rem;
   width: 100%;
   position: fixed;
+  z-index: 3;
   top: 0;
   left: 0;
   color: black;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  background: white;
+  transition: all 200ms ease-in-out;
+
+  ${props => props.scrolling && css`
+    background: ${props.theme.color.black};
+    padding: 1rem 2rem;
+  `}
 `
 
 const Navi = styled.div`
-  width: 250px;
+  width: 300px;
   display: flex;
   justify-content: space-between;
 `
 
-export default (props) => {
-  const { navItems = [] } = props
+export default class extends React.PureComponent {
+  state = {
+    scrolling: undefined
+  }
 
-  return (
-    <Header>
-      <Navi>
-        {
-          navItems.map((link, index) => (
-            <Link key={index} to={link.href}>{link.text}</Link>
-          ))
-        }
-      </Navi>
-    </Header>
-  )
+  componentDidMount () {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll = () => {
+    const { scrolling } = this.state
+
+    if (window.pageYOffset < 100 && scrolling) {
+      this.setState({ scrolling: undefined });
+    } else if (window.pageYOffset > 100 && !scrolling) {
+      this.setState({ scrolling: true });
+    }
+  }
+
+  render () {
+    const { navItems = [] } = this.props
+
+    console.log('this', this.state)
+
+    return (
+      <Header scrolling={this.state.scrolling} innerRef={e => { this.headerRef = e }}>
+        <Navi>
+          {
+            navItems.map((link, index) => (
+              <Link key={index} to={link.href}>{link.text}</Link>
+            ))
+          }
+        </Navi>
+      </Header>
+    )
+  }
 }

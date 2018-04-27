@@ -17,54 +17,37 @@ body {
   box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Permanent Marker', cursive;
-}
-
-h1 {
-  font-size: 5rem;
-  line-height: 1;
-}
-
 p {
   font-size: 16px;
   line-height: 24px;
 }
 
-.transition-wrapper {
-  position: relative;
-  z-index: 1;
-}
-
-.transition-wrapper .transition-item {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-}
-
 .detail-page {
-  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
-}
- 
-.detail-page.transition-appear {
-  opacity: 0;
-  transform: translate3d(-100%, 0, 0);
+  animation: slide-from-right 300ms cubic-bezier(0.42, 0, 0.25, 0.98);
 }
 
-.detail-page.transition-appear.transition-appear-active {
-  opacity: 0;
-  transform: translate3d(-100%, 0, 0);
-}
-.detail-page.transition-leave {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
+@keyframes slide-from-right {
+  0% {
+    position: relative;
+    opacity: 0;
+    left: 200px;
+  }
+  100% {
+    position: relative;
+    opacity: 1;
+    left: 0;
+  }
 }
 
-.detail-page.transition-leave.transition-leave-active {
-  opacity: 0;
-  transform: translate3d(100%, 0, 0);
+@keyframes slide-from-left {
+  0% {
+    position: relative;
+    opacity: 0;
+    left: -400px;
+  }
+  100% {
+    position: relative;
+    opacity: 1;
+    left: 0;
+  }
 }
