@@ -9,38 +9,38 @@ const Wrapper = styled.div`
 const Info = (props) => {
   const {
     words,
-    timeToRead
+    date
   } = props
 
   return (
     <div>
-      <span>{words} {words === 1 ? 'Wort' : 'Wörter'}</span>
-      <span>Lesezeit: {timeToRead}</span>
+      <span>{words} {words === 1 ? 'Wort' : 'Wörter'}</span>|<span>{date}</span>
     </div>
   )
 }
 
 export default (props) => {
-  console.log('props', props)
   const {
     data: { allMarkdownRemark }
-  } = props 
+  } = props
+
+  console.log(allMarkdownRemark)
 
   return (
     <div>
       <h1>blog</h1>
       {
         allMarkdownRemark.edges.map((item, index) => {
-          const { node: { frontmatter, wordCount, timeToRead } } = item
+          const { node: { frontmatter, wordCount } } = item
           return (
             <Wrapper key={index}>
               <Link to={frontmatter.path}>
-                {frontmatter.title}
+                <h3>{frontmatter.title}</h3>
               </Link>
               <span>
                 <Info
                   words={wordCount.words}
-                  timeToRead={timeToRead}
+                  date={frontmatter.date}
                 />
               </span>
             </Wrapper>
@@ -59,6 +59,8 @@ export const pageQuery = graphql`
           frontmatter {
             path
             title
+            thumbnail
+            date(formatString: "DD MMMM YYYY")
           }
           wordCount {
             paragraphs

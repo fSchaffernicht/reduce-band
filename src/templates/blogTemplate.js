@@ -1,7 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const StyledDate = styled.div`
+  font-size: 2rem;
+`
 
 export default ({ data }) => {
-  console.log('blog template', data)
   const { markdownRemark } = data
 
   if (!markdownRemark) {
@@ -14,7 +18,7 @@ export default ({ data }) => {
     <div className='blog-post-container'>
       <div className='blog-post'>
         <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
+        <StyledDate>{frontmatter.date}</StyledDate>
         <img src={frontmatter.thumbnail} />
         <div
           className='blog-post-content'
@@ -32,7 +36,7 @@ export const pageQuery = graphql`
       frontmatter {
         path
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD MMMM YYYY")
         thumbnail
       }
       wordCount {

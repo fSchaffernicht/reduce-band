@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import styled, { ThemeProvider } from 'styled-components'
 import theme from './theme'
 
-import { Header } from '../components'
+import { Header, Link } from '../components'
 import './index.css'
 
 const Wrapper = styled.div`
@@ -18,7 +18,23 @@ const Container = styled.div`
   padding: 0 0.5rem;
 `
 
+const navItems = [
+  {
+    href: '/about',
+    text: 'About'
+  },
+  {
+    href: '/blog',
+    text: 'Blog'
+  },
+  {
+    href: '/contact',
+    text: 'Kontakt'
+  }
+]
+
 const Layout = (props) => {
+  console.log('props', props)
   const { children, data } = props
 
   return (
@@ -31,8 +47,12 @@ const Layout = (props) => {
             { name: 'keywords', content: 'sample, something' }
           ]}
         />
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header navItems={navItems} />
         <Container>
+          {
+            props.location.pathname !== '/' &&
+            <Link to='/'>{'< zurück'}</Link>
+          }
           {children()}
         </Container>
       </Wrapper>

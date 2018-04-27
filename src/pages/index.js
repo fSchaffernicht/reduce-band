@@ -11,9 +11,9 @@ export default (props) => {
   const { data } = props
   return (
     <div>
-      <h1>home</h1>
-      <p>Hier kommt unser Blog hin</p>
-      <Link to='/blog'>blog</Link>
+      <h1>reduce</h1>
+      <p>Wir sind die Band Reduce aus Frankfurt am Main und wir lieben Musik.</p>
+      <Link to='/about' mark>mehr erfahren</Link>
     </div>
   )
 }
