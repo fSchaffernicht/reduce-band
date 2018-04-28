@@ -23,6 +23,7 @@ const StyledDate = styled.div`
 `
 
 export default ({ data }) => {
+  console.log('mark', data)
   const { markdownRemark } = data
 
   if (!markdownRemark) {
@@ -46,8 +47,8 @@ export default ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query BlogPostByPath($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         path

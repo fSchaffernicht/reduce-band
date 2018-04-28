@@ -5,44 +5,15 @@ import {
   Section,
   Container,
   Link,
-  Headline
+  Headline,
+  BlogPreview
 } from '../components'
 
-const Wrapper = styled.div`
-  margin-bottom: 5rem;
-
-  &:first-child {
-    margin-top: 0;
-  }
-`
-
-const BlogLink = styled(Link)`
-  font-size: 2rem;
-  color: white;
-  font-family: 'Permanent Marker', cursive;
-`
-
-const InfoWrapper = styled.div`
-  mark {
-    background: #282c34;
-    color: white;
-  }
-`
-
-const Info = (props) => {
+export default (props) => {
   const {
-    text
+    data: { allMarkdownRemark }
   } = props
 
-  return (
-    <InfoWrapper>
-      <span>{text}</span>
-    </InfoWrapper>
-  )
-}
-
-export default (props) => {
-  console.log('props', props)
   return (
     <DetailPage>
       <Section>
@@ -55,19 +26,20 @@ export default (props) => {
       <Section dark>
         <Container max>
           {
-            props.data.allMarkdownRemark.edges.map((item, index) => {
-              const { node: { frontmatter } } = item
+            allMarkdownRemark.edges.map((item, index) => {
+              const { node: { frontmatter, fields } } = item
               return (
-                <Wrapper key={index}>
-                  <BlogLink to={frontmatter.path}>
-                    {frontmatter.title}
-                  </BlogLink>
-                  <Info text={frontmatter.date} />
-                </Wrapper>
+                <BlogPreview
+                  invert
+                  title={frontmatter.title}
+                  date={frontmatter.date}
+                  thumbnail={frontmatter.thumbnail}
+                  path={fields.slug}
+                />
               )
             })
           }
-          <Link to='/blog'>zum Blog</Link>
+          <Link mark invert to='/blog'>zum Blog</Link>
         </Container>
       </Section>
     </DetailPage>
@@ -76,16 +48,12 @@ export default (props) => {
 
 export const pageQuery = graphql`
   query SiteQuery {
-    allSitePage {
-      edges {
-        node {
-          path
-        }
-      }
-    }
     allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, limit: 3) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             path
             title

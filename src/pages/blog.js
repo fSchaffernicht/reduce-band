@@ -1,41 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
+
 import {
   DetailPage,
   Section,
   Container,
-  Link,
-  Headline
+  Headline,
+  BlogPreview
 } from '../components'
-
-const Wrapper = styled.div`
-  margin-top: 5rem;
-`
-
-const BlogLink = styled(Link)`
-  font-size: 2rem;
-  color: ${props => props.theme.color.black};
-  font-family: 'Permanent Marker', cursive;
-`
-
-const InfoWrapper = styled.div`
-  mark {
-    background: #282c34;
-    color: white;
-  }
-`
-
-const Info = (props) => {
-  const {
-    text
-  } = props
-
-  return (
-    <InfoWrapper>
-      <span>{text}</span>
-    </InfoWrapper>
-  )
-}
 
 export default (props) => {
   const {
@@ -49,14 +20,14 @@ export default (props) => {
           <Headline text='Band-Tage-Buch' />
           {
             allMarkdownRemark.edges.map((item, index) => {
-              const { node: { frontmatter } } = item
+              const { node: { frontmatter, fields } } = item
               return (
-                <Wrapper key={index}>
-                  <BlogLink to={frontmatter.path}>
-                    {frontmatter.title}
-                  </BlogLink>
-                  <Info text={frontmatter.date} />
-                </Wrapper>
+                <BlogPreview
+                  title={frontmatter.title}
+                  date={frontmatter.date}
+                  thumbnail={frontmatter.thumbnail}
+                  path={fields.slug}
+                />
               )
             })
           }
@@ -68,9 +39,12 @@ export default (props) => {
 
 export const pageQuery = graphql`
   query BlogQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, limit: 1000) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             path
             title

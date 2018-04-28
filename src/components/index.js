@@ -1,4 +1,5 @@
 export { default as DetailPage } from './DetailPage'
+export { default as BlogPreview } from './Preview'
 export { default as Section } from './Section'
 export { default as Container } from './Container'
 export { default as Header } from './Header'

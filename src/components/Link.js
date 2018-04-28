@@ -11,22 +11,29 @@ const Link = styled(gatsbyLink)`
     font-weight: bold;
   }
 
-  &.has-mark {
+  &.is-mark {
     color: white;
     background: ${props => props.theme.color.black};
   }
+
+  &.is-invert {
+    background: white;
+    color: ${props => props.theme.color.black};
+  }
 `
 
-const Mark = styled.mark`
-  background: black;
-`
+const getClassName = (className, mark, invert) => {
+  let classes = className
 
-const getClassName = (className, mark) => {
   if (mark) {
-    return `${className} has-mark`
+    classes += ` is-mark`
   }
 
-  return className
+  if (invert) {
+    classes += ` is-invert`
+  }
+
+  return classes
 }
 
 export default (props) => {
@@ -34,6 +41,7 @@ export default (props) => {
     children,
     to,
     mark,
+    invert,
     onClick,
     className
   } = props
@@ -43,7 +51,7 @@ export default (props) => {
       activeClassName='is-active'
       to={to}
       onClick={onClick}
-      className={getClassName(className, mark)}
+      className={getClassName(className, mark, invert)}
     >
       {children}
     </Link>
@@ -51,7 +59,7 @@ export default (props) => {
 
   if (mark) {
     return (
-      <Mark>{link}</Mark>
+      <mark>{link}</mark>
     )
   }
 
