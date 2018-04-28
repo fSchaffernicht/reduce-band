@@ -1,5 +1,6 @@
 ---
 path: /blog/ein-fast-echter-eintrag
+thumbnail: /assets/bildschirmfoto-2018-04-28-um-15.00.14.png
 date: '2018-04-26'
 title: Und wieder einmal zur Probe
 ---
