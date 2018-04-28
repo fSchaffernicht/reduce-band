@@ -5,7 +5,6 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` })
-    console.log('!!!!!!!!!!!!!!!!!!!!!', slug)
     createNodeField({
       node,
       name: `slug`,
@@ -27,9 +26,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             fields {
               slug
             }
-            frontmatter {
-              path
-            }
           }
         }
       }
@@ -40,7 +36,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      console.log('node >°!', node)
       createPage({
         path: node.fields.slug,
         component: blogPostTemplate,
