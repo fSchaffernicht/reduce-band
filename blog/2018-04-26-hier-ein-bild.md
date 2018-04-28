@@ -1,5 +1,4 @@
 ---
-path: /blog/mit-bild
 thumbnail: /assets/jetty-598198_640.jpg
 date: '2018-04-26'
 title: hier ein bild

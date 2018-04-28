@@ -55,7 +55,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            path
             title
             thumbnail
             date(formatString: "DD MMMM YYYY")

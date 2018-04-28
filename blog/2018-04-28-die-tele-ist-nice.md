@@ -1,5 +1,4 @@
 ---
-path: /blog/auch-recht-neu
 thumbnail: /assets/bildschirmfoto-2018-04-28-um-11.43.00.png
 date: '2018-04-28'
 title: Die Tele ist nice

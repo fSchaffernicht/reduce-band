@@ -12,7 +12,6 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { name: path, label: Path }
       - { name: thumbnail, label: Featured Image, widget: image }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title, widget: string }
