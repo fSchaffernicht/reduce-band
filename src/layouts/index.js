@@ -1,19 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
 import styled, { ThemeProvider } from 'styled-components'
+import './index.css'
 import theme from './theme'
 
-import { Header, Link } from '../components'
-import './index.css'
+import { Header } from '../components'
 
 const Wrapper = styled.div`
 
 `
 
-const Container = styled.div`
-  position: relative;
+const Back = styled.div`
+  position: absolute;
 `
 
 const navItems = [
@@ -49,13 +48,11 @@ const Layout = (props) => {
           ]}
         />
         <Header navItems={navItems} />
-        <Container>
-          {
-            props.location.pathname !== '/' &&
-            <div onClick={() => props.history.goBack()}>{'< zurück'}</div>
-          }
-          {children()}
-        </Container>
+        {/* {
+          props.location.pathname !== '/' &&
+          <Back onClick={() => props.history.goBack()}>{'< zurück'}</Back>
+        } */}
+        {children()}
       </Wrapper>
     </ThemeProvider>
   )

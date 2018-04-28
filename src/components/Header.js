@@ -19,11 +19,15 @@ const Header = styled.div`
   ${props => props.scrolling && css`
     background: ${props.theme.color.black};
     padding: 1rem 2rem;
+
+    a {
+      color: white;
+    }
   `}
 `
 
 const Navi = styled.div`
-  width: 300px;
+  width: 350px;
   display: flex;
   justify-content: space-between;
 `

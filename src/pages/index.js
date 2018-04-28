@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+
 import {
   DetailPage,
   Section,
@@ -24,13 +24,13 @@ export default (props) => {
         </Container>
       </Section>
       <Section dark>
-        <Container max>
+        <Container>
+          <Headline type='h2' text='neues' />
           {
             allMarkdownRemark.edges.map((item, index) => {
               const { node: { frontmatter, fields } } = item
               return (
                 <BlogPreview
-                  invert
                   title={frontmatter.title}
                   date={frontmatter.date}
                   thumbnail={frontmatter.thumbnail}
@@ -39,6 +39,8 @@ export default (props) => {
               )
             })
           }
+        </Container>
+        <Container>
           <Link mark invert to='/blog'>zum Blog</Link>
         </Container>
       </Section>

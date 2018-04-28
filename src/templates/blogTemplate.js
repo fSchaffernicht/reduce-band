@@ -4,7 +4,8 @@ import {
   DetailPage,
   Section,
   Container,
-  Headline
+  Headline,
+  Link
 } from '../components'
 
 const Html = styled.div`
@@ -36,6 +37,7 @@ export default ({ data }) => {
     <DetailPage>
       <Section>
         <Container>
+          <Link to='/blog'>{`< zur Übersicht`}</Link>
           <Headline text={frontmatter.title} />
           <StyledDate>{frontmatter.date}</StyledDate>
           <Image src={frontmatter.thumbnail} />

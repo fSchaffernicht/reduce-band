@@ -1,23 +1,40 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import Link from './Link'
 
-const Wrapper = styled.div`
-  margin-top: 5rem;
-  max-width: 30%;
+const Wrapper = styled.figure`
+  margin: 0;
+  padding: 0;
+  margin-bottom: 3rem;
+  width: 30%;
   float: left;
-  margin-right: 2rem;
+  margin-right: 3rem;
 
-  ${props => props.invert && css`
-    color: white;
-  `}
+  &:nth-of-type(3n+3) {
+    margin-right: 0;
+  }
+
+  @media (max-width: 960px) {
+    width: 49%;
+    margin-right: 1rem;
+
+    &:nth-of-type(2n+2) {
+      margin-right: 0;
+    }
+
+    &:nth-of-type(3n+3) {
+      margin-right: 1rem;
+    }
+  }
 `
 
 const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 100px;
+  height: 150px;
   overflow: hidden;
+  margin-bottom: 1rem;
+  transition: all 200ms;  
 
   img {
     position: absolute;
@@ -29,20 +46,28 @@ const ImageWrapper = styled.div`
 
   &:hover {
     opacity: 0.8;
+
     img {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
   }
 `
 
 const BlogLink = styled(Link)`
-  font-size: 2rem;
-  color: ${props => props.theme.color.black};
+  font-size: 1.8rem;
+  line-height: 1;
   font-family: 'Permanent Marker', cursive;
+  opacity: 1;
   transition: all 200ms;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `
 
 const InfoWrapper = styled.div`
+  margin-top: 1rem;
+
   mark {
     background: ${props => props.theme.color.black};
     color: white;
@@ -71,12 +96,11 @@ export default (props) => {
     path,
     title,
     date,
-    thumbnail,
-    invert
+    thumbnail
   } = props
 
   return (
-    <Wrapper invert={invert}>
+    <Wrapper>
       <BlogLink to={path}>
         <ImageWrapper>
           <Thumbnail src={thumbnail} />

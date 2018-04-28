@@ -3,4 +3,16 @@ import styled from 'styled-components'
 export default styled.div`
   max-width: 960px;
   margin: auto;
+  
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0px;
+  }
+  
+  @media (max-width: 960px) {
+    padding: 1rem;
+  }
 `

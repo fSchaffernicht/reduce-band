@@ -13,6 +13,10 @@ body {
   color: #282c34;
 }
 
+a {
+  color: #282c34;
+}
+
 * {
   box-sizing: border-box;
 }
