@@ -1,6 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { DetailPage, Link, Headline } from '../components'
+import {
+  DetailPage,
+  Section,
+  Container,
+  Link,
+  Headline
+} from '../components'
 
 const Wrapper = styled.div`
   margin-top: 5rem;
@@ -36,24 +42,26 @@ export default (props) => {
     data: { allMarkdownRemark }
   } = props
 
-  console.log(allMarkdownRemark)
-
   return (
     <DetailPage>
-      <Headline text='Band-Tage-Buch' />
-      {
-        allMarkdownRemark.edges.map((item, index) => {
-          const { node: { frontmatter } } = item
-          return (
-            <Wrapper key={index}>
-              <BlogLink to={frontmatter.path}>
-                {frontmatter.title}
-              </BlogLink>
-              <Info text={frontmatter.date} />
-            </Wrapper>
-          )
-        })
-      }
+      <Section>
+        <Container>
+          <Headline text='Band-Tage-Buch' />
+          {
+            allMarkdownRemark.edges.map((item, index) => {
+              const { node: { frontmatter } } = item
+              return (
+                <Wrapper key={index}>
+                  <BlogLink to={frontmatter.path}>
+                    {frontmatter.title}
+                  </BlogLink>
+                  <Info text={frontmatter.date} />
+                </Wrapper>
+              )
+            })
+          }
+        </Container>
+      </Section>
     </DetailPage>
   )
 }

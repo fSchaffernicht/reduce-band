@@ -9,14 +9,11 @@ import { Header, Link } from '../components'
 import './index.css'
 
 const Wrapper = styled.div`
-  margin-top: 300px;
+
 `
 
 const Container = styled.div`
   position: relative;
-  margin: auto;
-  max-width: 760px;
-  padding: 0 0.5rem;
 `
 
 const navItems = [

@@ -13,7 +13,7 @@ const Link = styled(gatsbyLink)`
 
   &.has-mark {
     color: white;
-    background: black;
+    background: ${props => props.theme.color.black};
   }
 `
 

@@ -1,6 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { DetailPage, Headline } from '../components'
+import {
+  DetailPage,
+  Section,
+  Container,
+  Headline
+} from '../components'
 
 const Html = styled.div`
   img {
@@ -28,10 +33,14 @@ export default ({ data }) => {
 
   return (
     <DetailPage>
-      <Headline text={frontmatter.title} />
-      <StyledDate>{frontmatter.date}</StyledDate>
-      <Image src={frontmatter.thumbnail} />
-      <Html dangerouslySetInnerHTML={{ __html: html }} />
+      <Section>
+        <Container>
+          <Headline text={frontmatter.title} />
+          <StyledDate>{frontmatter.date}</StyledDate>
+          <Image src={frontmatter.thumbnail} />
+          <Html dangerouslySetInnerHTML={{ __html: html }} />
+        </Container>
+      </Section>
     </DetailPage>
   )
 }
