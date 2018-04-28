@@ -11,7 +11,7 @@ import {
 
 export default (props) => {
   const {
-    data: { allMarkdownRemark }
+    data: { allMarkdownRemark, allImageSharp }
   } = props
 
   return (
@@ -29,11 +29,13 @@ export default (props) => {
           {
             allMarkdownRemark.edges.map((item, index) => {
               const { node: { frontmatter, fields } } = item
+              const image = allImageSharp.edges.find(x => x.node.id.includes(frontmatter.thumbnail))
+
               return (
                 <BlogPreview
                   title={frontmatter.title}
                   date={frontmatter.date}
-                  thumbnail={frontmatter.thumbnail}
+                  thumbnail={image.node.resolutions.src}
                   path={fields.slug}
                 />
               )
@@ -67,6 +69,16 @@ export const pageQuery = graphql`
             words
           }
           timeToRead
+        }
+      }
+    }
+    allImageSharp(sort: {fields: [id]}) {
+      edges {
+        node {
+          id
+          resolutions(width: 300) {
+            src
+          }
         }
       }
     }
