@@ -13,8 +13,6 @@ export default (props) => {
     data: { allMarkdownRemark, allImageSharp }
   } = props
 
-  console.log('props', props)
-
   return (
     <DetailPage>
       <Section>

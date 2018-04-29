@@ -16,15 +16,20 @@ const Wrapper = styled.figure`
 
   @media (max-width: 960px) {
     width: 49%;
-    margin-right: 1rem;
+    margin-right: 2%;
 
     &:nth-of-type(2n+2) {
       margin-right: 0;
     }
 
     &:nth-of-type(3n+3) {
-      margin-right: 1rem;
+      margin-right: 2%;
     }
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+    margin-right: 0;
   }
 `
 

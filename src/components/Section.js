@@ -17,4 +17,9 @@ export default styled.section`
     padding: 5rem 0;
     margin: 5rem 0;
   }
+
+  @media (max-width: 500px) {
+    padding: 3rem 0;
+    margin: 3rem 0;
+  }
 `

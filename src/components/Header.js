@@ -18,7 +18,6 @@ const Header = styled.div`
 
   ${props => props.scrolling && css`
     background: ${props.theme.color.black};
-    padding: 1rem 2rem;
 
     a {
       color: white;
@@ -32,7 +31,7 @@ const Navi = styled.div`
   justify-content: space-between;
 `
 
-export default class extends React.PureComponent {
+export default class extends React.Component {
   state = {
     scrolling: undefined
   }
@@ -57,8 +56,6 @@ export default class extends React.PureComponent {
 
   render () {
     const { navItems = [] } = this.props
-
-    console.log('this', this.state)
 
     return (
       <Header scrolling={this.state.scrolling} innerRef={e => { this.headerRef = e }}>

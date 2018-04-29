@@ -5,9 +5,11 @@ import styled from 'styled-components'
 const Link = styled(gatsbyLink)`
   font-size: 1rem;
   text-decoration: none;
+  transition: all 200ms ease-in-out;
 
   &.is-active {
-    font-weight: bold;
+    color: white;
+    background: ${props => props.theme.color.black};
   }
 
   &.is-mark {
@@ -47,6 +49,7 @@ export default (props) => {
 
   const link = (
     <Link
+      exact
       activeClassName='is-active'
       to={to}
       onClick={onClick}
