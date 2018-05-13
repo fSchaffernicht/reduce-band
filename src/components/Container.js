@@ -1,8 +1,12 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export default styled.div`
   max-width: 960px;
   margin: auto;
+
+  ${props => props.medium && css`
+    max-width: 750px;
+  `}
   
   &:after {
     content: "";

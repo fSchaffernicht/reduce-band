@@ -13,7 +13,7 @@ export default (props) => {
         <Container>
           <Headline text='Kontakt' />
           <p>Die beste Kontaktaufnahme ist immer noch über E-Mail :)</p>
-          <a href='mailto:felix@schaffernicht.com'>mail</a>
+          <a href='mailto:reduce.band@gmail.com'>reduce.band@gmail.com</a>
         </Container>
       </Section>
     </DetailPage>

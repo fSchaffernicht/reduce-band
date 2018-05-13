@@ -8,6 +8,8 @@ const H1 = styled.h1`
   position: relative;
   animation: slide-from-left 300ms cubic-bezier(0.42, 0, 0.25, 0.98);
   color: inherit;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 
   @media (max-width: 960px) {
     font-size: 3rem;

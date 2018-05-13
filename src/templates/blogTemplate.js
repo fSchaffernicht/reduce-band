@@ -9,6 +9,10 @@ import {
 } from '../components'
 
 const Html = styled.div`
+  p {
+    font-size: 110%;
+    line-height: 1.6;
+  }
   img {
     width: 100%;
   }
@@ -36,7 +40,7 @@ export default ({ data }) => {
   return (
     <DetailPage>
       <Section>
-        <Container>
+        <Container medium>
           <Link to='/blog'>{`< zur Übersicht`}</Link>
           <Headline text={frontmatter.title} />
           <StyledDate>{frontmatter.date}</StyledDate>

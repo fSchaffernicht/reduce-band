@@ -23,7 +23,7 @@ export default (props) => {
           <Link to='/about' mark>mehr erfahren</Link>
         </Container>
       </Section>
-      <Section dark>
+      {/* <Section dark>
         <Container>
           <Headline type='h2' text='neues' />
           {
@@ -45,7 +45,7 @@ export default (props) => {
         <Container>
           <Link mark invert to='/blog'>zum Blog</Link>
         </Container>
-      </Section>
+      </Section> */}
     </DetailPage>
   )
 }
