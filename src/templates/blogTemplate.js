@@ -28,7 +28,6 @@ const StyledDate = styled.div`
 `
 
 export default ({ data }) => {
-  console.log('mark', data)
   const { markdownRemark } = data
 
   if (!markdownRemark) {
