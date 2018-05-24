@@ -76,12 +76,18 @@ const Navi = styled.nav`
 export default class extends React.Component {
   state = {
     scrolling: undefined,
-    isVisible: window && window.innerWidth >= 960
+    isVisible: undefined
   }
 
   componentDidMount () {
     window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('resize', this.handleResize)
+
+    if (window.innerWidth >= 960) {
+      this.setState({ isVisible: true })  
+    } else {
+      this.setState({ isVisible: false })  
+    }
   }
 
   componentWillUnmount () {

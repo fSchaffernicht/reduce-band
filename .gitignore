@@ -60,3 +60,5 @@ typings/
 .cache/
 public
 yarn-error.log
+.env.production
+.env.development
