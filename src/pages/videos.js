@@ -9,7 +9,7 @@ import {
 
 import styled from 'styled-components';
 
-const key = process.env.API_KEY
+const key = API_KEY
 console.log(key)
 const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCCxaY-87Cazvpq7AIqWW8nA&key=${key}`
 
