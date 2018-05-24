@@ -25,6 +25,10 @@ const navItems = [
     text: 'About'
   },
   {
+    href: '/videos',
+    text: 'Videos'
+  },
+  {
     href: '/blog',
     text: 'Blog'
   },

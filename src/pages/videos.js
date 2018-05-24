@@ -3,22 +3,31 @@ import {
   DetailPage,
   Section,
   Container,
-  Headline
+  Headline,
+  Link
 } from '../components'
+
+import styled from 'styled-components';
+
 const key = 'AIzaSyBwBJ3GxMhJTIDy6610qNAjVQpRKNadtjg'
-const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC2OtJK_WhH3VxbfAqFIKqCA&key=${key}`
+const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCCxaY-87Cazvpq7AIqWW8nA&key=${key}`
+
+const Wrapper = styled.div`
+  margin-bottom: 4rem;
+`
+
 export default class extends React.Component {
   state = {
     videos: [],
-    id: undefined
   }
 
   componentDidMount () {
     fetch(url)
       .then(result => result.json())
       .then(result => {
+        console.log('result', result)
         this.setState(() => ({
-          videos: result.items
+          videos: result.items.slice(1)
         }))
       })
       .catch(e => {
@@ -26,38 +35,26 @@ export default class extends React.Component {
       })
   }
 
-  handleShow = (id) => {
-    this.setState(() => ({
-      id
-    }))
-  }
-
   render () {
+    const { videos } = this.state
+
     return (
       <DetailPage>
         <Section>
           <Container>
             <Headline text='Videos' />
             {
-              this.state.videos.map((video, index) => {
-                console.log('video', video)
+              videos.map((video, index) => {
                 if (video) {
                   return (
-                    <div>
-                      <img src={video.snippet.thumbnails.default.url} />
+                    <Wrapper key={index}>
+                      <img src={video.snippet.thumbnails.medium.url} />
                       <h3>{video.snippet.title}</h3>
-                      <p>{video.snippet.description}</p>
-                      <div onClick={() => this.handleShow(video.id.videoId)}>go to video</div>
-                    </div>
+                      <Link href={`https://www.youtube.com/watch?v=${video.id.videoId}`}>zum Video</Link>
+                    </Wrapper>
                   )
                 }
               })
-            }
-            {
-              this.state.id &&
-              <iframe id="ytplayer" type="text/html" width="720" height="405"
-                src={`https://www.youtube.com/embed/${this.state.id}`}
-                frameBorder="0" allowFullScreen />
             }
           </Container>
         </Section>

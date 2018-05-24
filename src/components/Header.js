@@ -23,25 +23,82 @@ const Header = styled.div`
       color: white;
     }
   `}
+
+  @media (max-width: 960px) {
+    padding: 0;
+    display: block;
+    position: fixed;
+    background: ${props => props.theme.color.black};
+
+    a {
+      color: white;
+    }
+  }
 `
 
-const Navi = styled.div`
+const Wrapper = styled.div`
+  display: none;
+
+  @media (max-width: 960px) {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+`
+
+const Hamburger = styled.div`
+  margin: 1rem;
+  display: none;
+  color: white;
+
+  @media (max-width: 960px) {
+    display: flex;
+  }
+`
+
+const Navi = styled.nav`
   width: 350px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 960px) {
+    display: block;
+    width: 100%;
+
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 1rem;
+    }
+  }
 `
 
 export default class extends React.Component {
   state = {
-    scrolling: undefined
+    scrolling: undefined,
+    isVisible: window.innerWidth >= 960
   }
 
   componentDidMount () {
     window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('resize', this.handleResize)
   }
 
   componentWillUnmount () {
     window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('resize', this.handleResize)    
+  }
+
+  handleResize = () => {
+    if (window.innerWidth >= 960 && !this.state.isVisible) {
+      this.setState(prevState => ({
+        isVisible: true
+      }))
+    } else if (window.innerWidth <= 960 && this.state.isVisible) {
+      this.setState(prevState => ({
+        isVisible: false
+      }))
+    }
   }
 
   handleScroll = () => {
@@ -54,18 +111,32 @@ export default class extends React.Component {
     }
   }
 
+  toggleNav = () => {
+    if (window.innerWidth <= 960) {
+      this.setState(prevState => ({
+        isVisible: !prevState.isVisible
+      }))
+    }
+  }
+
   render () {
     const { navItems = [] } = this.props
 
     return (
       <Header scrolling={this.state.scrolling} innerRef={e => { this.headerRef = e }}>
-        <Navi>
-          {
-            navItems.map((link, index) => (
-              <Link key={index} to={link.href}>{link.text}</Link>
-            ))
-          }
-        </Navi>
+        <Wrapper>
+          <Hamburger onClick={this.toggleNav}>Menu</Hamburger>
+        </Wrapper>
+        {
+          this.state.isVisible &&
+          <Navi>
+            {
+              navItems.map((link, index) => (
+                <Link onClick={this.toggleNav} key={index} to={link.href}>{link.text}</Link>
+              ))
+            }
+          </Navi>
+        }
       </Header>
     )
   }

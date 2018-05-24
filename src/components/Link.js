@@ -23,6 +23,8 @@ const Link = styled(gatsbyLink)`
   }
 `
 
+const ExternalLink = Link.withComponent('a')
+
 const getClassName = (className, mark, invert) => {
   let classes = className
 
@@ -44,7 +46,8 @@ export default (props) => {
     mark,
     invert,
     onClick,
-    className
+    className,
+    href
   } = props
 
   const link = (
@@ -58,6 +61,12 @@ export default (props) => {
       {children}
     </Link>
   )
+
+  if (href) {
+    return (
+      <ExternalLink className='is-active' {...props}>{children}</ExternalLink>
+    )
+  }
 
   if (mark) {
     return (
