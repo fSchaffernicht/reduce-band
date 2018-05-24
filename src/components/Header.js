@@ -76,7 +76,7 @@ const Navi = styled.nav`
 export default class extends React.Component {
   state = {
     scrolling: undefined,
-    isVisible: window.innerWidth >= 960
+    isVisible: window && window.innerWidth >= 960
   }
 
   componentDidMount () {
@@ -104,15 +104,15 @@ export default class extends React.Component {
   handleScroll = () => {
     const { scrolling } = this.state
 
-    if (window.pageYOffset < 100 && scrolling) {
+    if (window && window.pageYOffset < 100 && scrolling) {
       this.setState({ scrolling: undefined });
-    } else if (window.pageYOffset > 100 && !scrolling) {
+    } else if (window && window.pageYOffset > 100 && !scrolling) {
       this.setState({ scrolling: true });
     }
   }
 
   toggleNav = () => {
-    if (window.innerWidth <= 960) {
+    if (window && window.innerWidth <= 960) {
       this.setState(prevState => ({
         isVisible: !prevState.isVisible
       }))

@@ -9,7 +9,7 @@ import {
 
 import styled from 'styled-components';
 
-const key = 'AIzaSyBwBJ3GxMhJTIDy6610qNAjVQpRKNadtjg'
+const key = process.env.API_KEY
 const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCCxaY-87Cazvpq7AIqWW8nA&key=${key}`
 
 const Wrapper = styled.div`
