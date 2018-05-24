@@ -16,6 +16,10 @@ const Wrapper = styled.div`
   margin-bottom: 4rem;
 `
 
+const filterOutChannel = (item, index) => {
+  return item.snippet.title !== 'reduce'
+}
+
 export default class extends React.Component {
   state = {
     videos: [],
@@ -25,9 +29,8 @@ export default class extends React.Component {
     fetch(url)
       .then(result => result.json())
       .then(result => {
-        console.log('result', result)
         this.setState(() => ({
-          videos: result.items.slice(1)
+          videos: result.items.filter(filterOutChannel)
         }))
       })
       .catch(e => {
