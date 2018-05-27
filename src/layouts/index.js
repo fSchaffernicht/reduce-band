@@ -24,10 +24,10 @@ const navItems = [
     href: '/about',
     text: 'About'
   },
-  {
-    href: '/videos',
-    text: 'Videos'
-  },
+  // {
+  //   href: '/videos',
+  //   text: 'Videos'
+  // },
   {
     href: '/blog',
     text: 'Blog'
