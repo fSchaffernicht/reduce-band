@@ -5,7 +5,7 @@ title: Reduce - The Juice
 ---
 Darin liegt unsere Stärke. Wie die verschiedenen und immer weiter diversifizierenden Sorten von Red Bull, bringt jeder von uns seinen eigenen Zappelsaft-Geschmack ins Projekt ein.
 
-_Zeit für eine Parabel._
+Zeit für eine Parabel_._
 
 _Ein Philosoph, ein Pragmatist und ein Querulant betreten einen Proberaum._
 
@@ -31,7 +31,7 @@ _Sechs Tage lang, mal drei._
 
 _Ein Philosoph, ein Pragmatist und ein Querulant betreten nun einen Proberaum um Musik zu machen._ Doch wer schrieb diesen Beitrag?
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
 
 Einsendeschluss ist der 10.6.2018,
 
