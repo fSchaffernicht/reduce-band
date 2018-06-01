@@ -17,7 +17,7 @@ _Ganze Alben und die Shuffle-Funktion wichen vier Liedern an der Spitze. _
 
 _Der Rest zentriert sich verdächtig um diese vier – passt ein Lied nicht ins Schema, wird übersprungen._
 
-_Man hört nicht mehr Musik um zu genießen - man hört zum selektieren und verwerten._
+_Man hört nicht mehr Musik um zu genießen – man hört zum selektieren und verwerten._
 
 _Pläne und Wünsche entspringen den resultierenden 'genialen' Einfällen._
 
