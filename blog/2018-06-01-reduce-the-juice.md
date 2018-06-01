@@ -5,31 +5,31 @@ title: Reduce - The Juice
 ---
 Darin liegt unsere Stärke. Wie die verschiedenen und immer weiter diversifizierenden Sorten von Red Bull, bringt jeder von uns seinen eigenen Zappelsaft-Geschmack ins Projekt ein.
 
-Zeit für eine Parabel.
+_Zeit für eine Parabel._
 
-Ein Philosoph, ein Pragmatist und ein Querulant betreten einen Proberaum.
+_Ein Philosoph, ein Pragmatist und ein Querulant betreten einen Proberaum._
 
-Doch gedanklich sind sie noch nicht ganz präsent…
+_Doch gedanklich sind sie noch nicht ganz präsent…_
 
-Die Woche über hat sich die gewohnte Playlist auf dem Weg zur Arbeit merklich geändert. 
+_Die Woche über hat sich die gewohnte Playlist auf dem Weg zur Arbeit merklich geändert. _
 
-Ganze Alben und die Shuffle-Funktion wichen vier Liedern an der Spitze. 
+_Ganze Alben und die Shuffle-Funktion wichen vier Liedern an der Spitze. _
 
-Der Rest zentriert sich verdächtig um diese vier – passt ein Lied nicht ins Schema, wird übersprungen.
+_Der Rest zentriert sich verdächtig um diese vier – passt ein Lied nicht ins Schema, wird übersprungen._
 
-Man hört nicht mehr Musik um zu genießen - man hört zum selektieren und verwerten.
+_Man hört nicht mehr Musik um zu genießen - man hört zum selektieren und verwerten._
 
-Pläne und Wünsche entspringen den resultierenden 'genialen' Einfällen.
+_Pläne und Wünsche entspringen den resultierenden 'genialen' Einfällen._
 
-Die Raucherpausen sind geradezu erfüllt von Geistesblitzen und Adrenalinausstößen. In peinlicher Stille...
+_Die Raucherpausen sind geradezu erfüllt von Geistesblitzen und Adrenalinausstößen. In peinlicher Stille..._
 
-Wie der Wurf einer leeren Dose in den Mülleimer – blind über die Schulter...doch keiner hat es gesehen.
+_Wie der Wurf einer leeren Dose in den Mülleimer – blind über die Schulter...doch keiner hat es gesehen._
 
-Der zweite Vollzeitjob ist geboren. Einer der die Bezeichnung ‘Home-Office’ erblassen lässt, da das Büro niemals nach Hause geht. Ein rein Psychischer Prozess den man gleichermaßen liebt zu hassen.
+_Der zweite Vollzeitjob ist geboren. Einer der die Bezeichnung ‘Home-Office’ erblassen lässt, da das Büro niemals nach Hause geht. Ein rein Psychischer Prozess den man gleichermaßen liebt zu hassen._
 
-Sechs Tage lang, mal drei.
+_Sechs Tage lang, mal drei._
 
-Ein Philosoph, ein Pragmatist und ein Querulant betreten nun einen Proberaum um Musik zu machen. Doch wer schrieb diesen Beitrag?
+_Ein Philosoph, ein Pragmatist und ein Querulant betreten nun einen Proberaum um Musik zu machen._ Doch wer schrieb diesen Beitrag?
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
