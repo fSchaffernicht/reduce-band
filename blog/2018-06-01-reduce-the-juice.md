@@ -3,7 +3,7 @@ thumbnail: /assets/img_0187.jpg
 date: '2018-06-01'
 title: Reduce - The Juice
 ---
-Darin liegt unsere Stärke. Wie die verschiedenen und immer weiter diversifizierenden Sorten von Red Bull, bringt jeder von uns seinen eigenen Zappelsaft-Geschmack ins Projekt ein.
+Darin liegt unsere Stärke. Wie die verschiedenen und immer weiter diversifizierenden Sorten von Red Bull, bringt jeder von uns Woche für Woche seinen eigenen Zappelsaft-Geschmack ins Projekt ein.
 
 Zeit für eine Parabel_._
 
