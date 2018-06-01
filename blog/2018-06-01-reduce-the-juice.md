@@ -35,6 +35,6 @@ _Ein Philosoph, ein Pragmatist und ein Querulant betreten nun einen Proberaum um
 
 Einsendeschluss ist der 10.6.2018,
 
-woraufhin der Gewinner des Original Leibnitz Kekses in Kürze bekannt gegeben wird.
+woraufhin der Gewinner des Original Leibniz Kekses in Kürze bekannt gegeben wird.
 
 Reduce.
