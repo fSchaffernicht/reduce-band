@@ -1,4 +1,5 @@
 import React from 'react'
+import { withPrefix } from 'gatsby-link'
 
 import {
   DetailPage,
@@ -6,6 +7,7 @@ import {
   Container,
   Link,
   Headline,
+  AudioPlayer,
   BlogPreview
 } from '../components'
 
@@ -19,7 +21,14 @@ export default (props) => {
       <Section>
         <Container>
           <Headline text='reduce' />
-          <p>Wir sind die Band Reduce aus Frankfurt am Main und wir lieben Musik.</p>
+          <AudioPlayer
+            title='Reduce - Demo'
+            source={withPrefix('/assets/reduce-final.mp3')}
+          />
+          <AudioPlayer
+            title='City - Demo'
+            source={withPrefix('/assets/city-final.mp3')}
+          />
           <Link to='/about' mark>mehr erfahren</Link>
         </Container>
       </Section>
