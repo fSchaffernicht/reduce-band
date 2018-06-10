@@ -4,7 +4,6 @@ import {
   DetailPage,
   Section,
   Container,
-  Link,
   Headline,
   BlogPreview
 } from '../components'
@@ -18,21 +17,15 @@ export default (props) => {
     <DetailPage>
       <Section>
         <Container>
-          <Headline text='reduce' />
-          <p>Wir sind die Band Reduce aus Frankfurt am Main und wir lieben Musik.</p>
-          <Link to='/about' mark>mehr erfahren</Link>
-        </Container>
-      </Section>
-      {/* <Section dark>
-        <Container>
-          <Headline type='h2' text='neues' />
+          <Headline text='Band-Tage-Buch' />
           {
             allMarkdownRemark.edges.map((item, index) => {
               const { node: { frontmatter, fields } } = item
-              const image = allImageSharp.edges.find(x => x.node.id.includes(frontmatter.thumbnail))
 
+              const image = allImageSharp.edges.find(x => x.node.id.includes(frontmatter.thumbnail))
               return (
                 <BlogPreview
+                  key={index}
                   title={frontmatter.title}
                   date={frontmatter.date}
                   thumbnail={image.node.resolutions.src}
@@ -42,17 +35,14 @@ export default (props) => {
             })
           }
         </Container>
-        <Container>
-          <Link mark invert to='/blog'>zum Blog</Link>
-        </Container>
-      </Section> */}
+      </Section>
     </DetailPage>
   )
 }
 
 export const pageQuery = graphql`
-  query SiteQuery {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, limit: 3) {
+  query BlogQuery {
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, limit: 1000) {
       edges {
         node {
           fields {

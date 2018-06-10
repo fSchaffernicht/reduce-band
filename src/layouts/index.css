@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Permanent+Marker');
 
 html {
   min-height: 100%;
@@ -9,9 +9,49 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: #232323;
+  background: white;
+  color: #282c34;
+}
+
+a {
+  color: #282c34;
 }
 
 * {
   box-sizing: border-box;
+}
+
+p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.detail-page {
+  animation: slide-from-right 300ms cubic-bezier(0.42, 0, 0.25, 0.98);
+}
+
+@keyframes slide-from-right {
+  0% {
+    position: relative;
+    opacity: 0;
+    left: 200px;
+  }
+  100% {
+    position: relative;
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes slide-from-left {
+  0% {
+    position: relative;
+    opacity: 0;
+    left: -400px;
+  }
+  100% {
+    position: relative;
+    opacity: 1;
+    left: 0;
+  }
 }

@@ -1,40 +1,66 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
 import styled, { ThemeProvider } from 'styled-components'
+import './index.css'
 import theme from './theme'
 
-import Header from '../components/header'
-import './index.css'
+import { Header } from '../components'
 
 const Wrapper = styled.div`
-  margin-top: 300px;
+
 `
 
-const Container = styled.div`
-  margin: auto;
-  max-width: 960px;
-  padding: 0 0.5rem;
+const Back = styled.div`
+  position: absolute;
 `
 
-const Layout = ({ children, data }) => (
-  <ThemeProvider theme={theme}>
-    <Wrapper>
-      <Helmet
-        title={data.site.siteMetadata.title}
-        meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' }
-        ]}
-      />
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <Container>
+const navItems = [
+  {
+    href: '/',
+    text: 'Home'
+  },
+  {
+    href: '/about',
+    text: 'About'
+  },
+  // {
+  //   href: '/videos',
+  //   text: 'Videos'
+  // },
+  {
+    href: '/blog',
+    text: 'Blog'
+  },
+  {
+    href: '/contact',
+    text: 'Kontakt'
+  }
+]
+
+const Layout = (props) => {
+  const { children, data } = props
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Wrapper>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: 'sample, something' }
+          ]}
+        />
+        <Header navItems={navItems} />
+        {/* {
+          props.location.pathname !== '/' &&
+          <Back onClick={() => props.history.goBack()}>{'< zurück'}</Back>
+        } */}
         {children()}
-      </Container>
-    </Wrapper>
-  </ThemeProvider>
-)
+      </Wrapper>
+    </ThemeProvider>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.func
