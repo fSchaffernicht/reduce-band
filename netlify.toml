@@ -1,0 +1,6 @@
+[build]
+  environment = { API_KEY = "AIzaSyBwBJ3GxMhJTIDy6610qNAjVQpRKNadtjg" }
+  SPECIAL_KEY = "AIzaSyBwBJ3GxMhJTIDy6610qNAjVQpRKNadtjg"
+
+[context.production.environment]
+    ACCESS_TOKEN = "super secret"

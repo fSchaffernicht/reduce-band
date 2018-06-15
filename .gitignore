@@ -62,4 +62,4 @@ public
 yarn-error.log
 .env.production
 .env.development
-netlify.toml
+
