@@ -1,6 +1,10 @@
 const path = require('path')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+})
+
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
   if (node.internal.type === `MarkdownRemark`) {
