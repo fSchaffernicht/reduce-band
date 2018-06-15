@@ -18,7 +18,7 @@ try {
 }
 
 const key = process.env.API_KEY
-console.log(key, process.env, specialKey)
+console.log(key, process, specialKey)
 const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCCxaY-87Cazvpq7AIqWW8nA&key=${key}`
 
 const Wrapper = styled.div`
