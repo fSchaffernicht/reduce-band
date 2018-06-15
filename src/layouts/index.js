@@ -24,10 +24,10 @@ const navItems = [
     href: '/about',
     text: 'About'
   },
-  // {
-  //   href: '/videos',
-  //   text: 'Videos'
-  // },
+  {
+    href: '/videos',
+    text: 'Videos'
+  },
   {
     href: '/blog',
     text: 'Blog'
@@ -52,10 +52,6 @@ const Layout = (props) => {
           ]}
         />
         <Header navItems={navItems} />
-        {/* {
-          props.location.pathname !== '/' &&
-          <Back onClick={() => props.history.goBack()}>{'< zurück'}</Back>
-        } */}
         {children()}
       </Wrapper>
     </ThemeProvider>
