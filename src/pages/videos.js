@@ -9,16 +9,18 @@ import {
 
 import styled, { css } from 'styled-components';
 
-let specialKey
-
+let roflKey
+let newKey
 try {
-  specialKey = SPECIAL_TEST_KEY
+  roflKey = SPECIAL_TEST_KEY
+  newKey = SPECIAL_KEY
+  console.log(roflKey, newKey)
 } catch(e) {
   console.log('e', e)
 }
 
 const key = process.env.API_KEY
-console.log(key, process, specialKey)
+console.log(key, process, roflKey, process.env)
 const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCCxaY-87Cazvpq7AIqWW8nA&key=${key}`
 
 const Wrapper = styled.div`
