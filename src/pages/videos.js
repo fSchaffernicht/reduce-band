@@ -92,7 +92,7 @@ export default class extends React.Component {
               <SortButton active={currentSort === 'oldest'} onClick={() => this.handleSort('oldest')}>älteste</SortButton>
             </Wrapper>
             {
-              videos.map((video, index) => {
+              videos && videos.map((video, index) => {
                 if (video) {
                   return (
                     <Wrapper key={index}>
