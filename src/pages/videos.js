@@ -9,9 +9,7 @@ import {
 
 import styled, { css } from 'styled-components';
 
-const key = process.env.API_KEY
-console.log(key, process.env)
-const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCCxaY-87Cazvpq7AIqWW8nA&key=${key}`
+const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCCxaY-87Cazvpq7AIqWW8nA&key=$AIzaSyBwBJ3GxMhJTIDy6610qNAjVQpRKNadtjg`
 
 const Wrapper = styled.div`
   margin-bottom: 4rem;
