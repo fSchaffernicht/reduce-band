@@ -48,6 +48,10 @@ const Image = styled.img`
 
 const VideoDate = styled.div`
   margin-bottom: 1rem;
+
+  @media (max-width: 960px) {
+    margin-top: 1rem;
+  }
 `
 
 const VideoHeadline = styled.h3`
@@ -76,8 +80,6 @@ const mapVideos = (video, index) => {
   if (!video) {
     return
   }
-
-  console.log(video)
   
   return (
     <Wrapper key={index}>
@@ -122,6 +124,21 @@ export default class extends React.Component {
 
   render () {
     const { videos, currentSort } = this.state
+
+    if (!videos || videos.length === 0) {
+      return (
+        <DetailPage>
+          <Section>
+            <Container>
+              <Headline text='Videos' />
+              <Wrapper>
+                loading ...
+              </Wrapper>
+            </Container>
+          </Section>
+        </DetailPage>
+      )
+    }
 
     return (
       <DetailPage>
