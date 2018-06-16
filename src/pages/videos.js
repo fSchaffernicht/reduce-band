@@ -19,6 +19,7 @@ if (process.env.NODE_ENV === 'development') {
 
 const Wrapper = styled.div`
   margin-bottom: 4rem;
+  overflow: hidden;
 `
 
 const SortButton = styled.div`
@@ -35,6 +36,28 @@ const SortButton = styled.div`
   `}
 `
 
+const Image = styled.img`
+  display: block;
+  float: left;
+  margin-right: 1.5rem;
+
+  @media (max-width: 960px) {
+    float: none;
+  }
+`
+
+const VideoDate = styled.div`
+  margin-bottom: 1rem;
+`
+
+const VideoHeadline = styled.h3`
+  margin-top: 0;
+
+  @media (max-width: 960px) {
+    margin-top: 1rem;
+  }
+`
+
 const filterOutChannel = (item, index) => {
   return item.snippet.title.toLowerCase() !== 'reduce'
 }
@@ -47,6 +70,24 @@ const sortVideos = sortParam => (a, b) => {
   }
 
   return 0
+}
+
+const mapVideos = (video, index) => {
+  if (!video) {
+    return
+  }
+
+  console.log(video)
+  
+  return (
+    <Wrapper key={index}>
+      <Image src={video.snippet.thumbnails.medium.url} />
+      <VideoDate>{new Date(video.snippet.publishedAt).toLocaleDateString()}</VideoDate>
+      <VideoHeadline>{video.snippet.title}</VideoHeadline>
+      <p>{video.snippet.description}</p>
+      <Link href={`https://www.youtube.com/watch?v=${video.id.videoId}`}>zum Video</Link>
+    </Wrapper>
+  )
 }
 
 export default class extends React.Component {
@@ -88,21 +129,21 @@ export default class extends React.Component {
           <Container>
             <Headline text='Videos' />
             <Wrapper>
-              <SortButton active={currentSort === 'newest'} onClick={() => this.handleSort('newest')}>neueste</SortButton>
-              <SortButton active={currentSort === 'oldest'} onClick={() => this.handleSort('oldest')}>älteste</SortButton>
+              <SortButton
+                active={currentSort === 'newest'}
+                onClick={() => this.handleSort('newest')}
+              >
+                neueste
+              </SortButton>
+              <SortButton
+                active={currentSort === 'oldest'}
+                onClick={() => this.handleSort('oldest')}
+              >
+                älteste
+              </SortButton>
             </Wrapper>
             {
-              videos && videos.map((video, index) => {
-                if (video) {
-                  return (
-                    <Wrapper key={index}>
-                      <img src={video.snippet.thumbnails.medium.url} />
-                      <h3>{video.snippet.title}</h3>
-                      <Link href={`https://www.youtube.com/watch?v=${video.id.videoId}`}>zum Video</Link>
-                    </Wrapper>
-                  )
-                }
-              })
+              videos && videos.map(mapVideos)
             }
           </Container>
         </Section>
