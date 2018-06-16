@@ -12,7 +12,7 @@ import styled, { css } from 'styled-components';
 let url = ''
 
 if (process.env.NODE_ENV === 'development') {
-  url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCCxaY-87Cazvpq7AIqWW8nA&key=AIzaSyA58xoliWPZRcQyPwLlDVdR2CWZBXLgNRc'
+  url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCCxaY-87Cazvpq7AIqWW8nA&key=${process.env.API_KEY}`
 } else {
   url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCCxaY-87Cazvpq7AIqWW8nA&key=AIzaSyBwBJ3GxMhJTIDy6610qNAjVQpRKNadtjg'
 }
