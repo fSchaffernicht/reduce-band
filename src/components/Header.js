@@ -20,6 +20,7 @@ const Header = styled.div`
     background: ${props.theme.color.black};
 
     a {
+      cursor: pointer;
       color: white;
     }
   `}
@@ -31,6 +32,7 @@ const Header = styled.div`
     background: ${props => props.theme.color.black};
 
     a {
+      cursor: pointer;
       color: white;
     }
   }
@@ -50,6 +52,7 @@ const Hamburger = styled.div`
   margin: 1rem;
   display: none;
   color: white;
+  cursor: pointer;
 
   @media (max-width: 960px) {
     display: flex;
@@ -66,6 +69,7 @@ const Navi = styled.nav`
     width: 100%;
 
     a {
+      border-top: 1px solid lightgrey;
       display: inline-block;
       width: 100%;
       padding: 1rem;
