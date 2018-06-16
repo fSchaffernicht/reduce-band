@@ -9,7 +9,13 @@ import {
 
 import styled, { css } from 'styled-components';
 
-const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCCxaY-87Cazvpq7AIqWW8nA&key=$AIzaSyBwBJ3GxMhJTIDy6610qNAjVQpRKNadtjg`
+let url = ''
+
+if (process.env.NODE_ENV === 'development') {
+  url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCCxaY-87Cazvpq7AIqWW8nA&key=AIzaSyA58xoliWPZRcQyPwLlDVdR2CWZBXLgNRc'
+} else {
+  url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCCxaY-87Cazvpq7AIqWW8nA&key=AIzaSyBwBJ3GxMhJTIDy6610qNAjVQpRKNadtjg'
+}
 
 const Wrapper = styled.div`
   margin-bottom: 4rem;
@@ -86,7 +92,7 @@ export default class extends React.Component {
               <SortButton active={currentSort === 'oldest'} onClick={() => this.handleSort('oldest')}>älteste</SortButton>
             </Wrapper>
             {
-              videos.map((video, index) => {
+              videos && videos.map((video, index) => {
                 if (video) {
                   return (
                     <Wrapper key={index}>
