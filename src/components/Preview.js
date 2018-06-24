@@ -27,6 +27,16 @@ const Wrapper = styled.figure`
     }
   }
 
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+
+    .title {
+      opacity: 0.8;
+    }
+  }
+
   @media (max-width: 500px) {
     width: 100%;
     margin-right: 0;
@@ -48,14 +58,6 @@ const ImageWrapper = styled.div`
     transform: scale(1);
     transition: all 200ms;    
   }
-
-  &:hover {
-    opacity: 0.8;
-
-    img {
-      transform: scale(1.05);
-    }
-  }
 `
 
 const BlogLink = styled(Link)`
@@ -64,10 +66,15 @@ const BlogLink = styled(Link)`
   font-family: 'Permanent Marker', cursive;
   opacity: 1;
   transition: all 200ms;
+  overflow: hidden;
+  display: block;
+`
 
-  &:hover {
-    opacity: 0.8;
-  }
+const Title = styled.div`
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 200ms;
 `
 
 const InfoWrapper = styled.div`
@@ -110,7 +117,7 @@ export default (props) => {
         <ImageWrapper>
           <Thumbnail src={thumbnail} />
         </ImageWrapper>
-        {title}
+        <Title className='title'>{title}</Title>
       </BlogLink>
       <Info text={date} />
     </Wrapper>
