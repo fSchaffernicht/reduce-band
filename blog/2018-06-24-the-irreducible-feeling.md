@@ -11,7 +11,7 @@ Eher sollte es noch gesteigert werden! Reduce ist das ES in uns; das, was wir li
 
 So viel zur Einleitung.
 
-Bald sind wir soweit endlich auf die Bühne zu können. In Kürze werden wir genug Songs haben, um einen kleinen Auftritt spielen zu können. Wie, wann, wo wir das tun werden ist noch gar nicht klar, aber dass es passieren wird ist wohl gewiss und so arbeiten wir Schritt für Schritt darauf hin endlich an dem, was wir am liebsten tun, auch andere teilhaben zu lassen.
+Bald sind wir soweit endlich auf die Bühne zu können. In Kürze werden wir genug Songs haben, um einen kleinen Auftritt spielen zu können. Wie, wann, wo wir das tun werden ist noch gar nicht klar, aber dass es passieren wird, ist wohl gewiss und so arbeiten wir Schritt für Schritt darauf hin endlich an dem, was wir am liebsten tun, auch andere teilhaben zu lassen.
 
 Unser neuer Song fühlt sich richtig gut an, und ich würde sogar sagen: er hat mehr Power, als alle anderen! Jetzt noch ein weiterer Song dazu und schon sind wir bereit für etliche kleine Gigs!
 
