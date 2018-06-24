@@ -17,7 +17,7 @@ Unser neuer Song fühlt sich richtig gut an, und ich würde sogar sagen: er hat 
 
 Unsere letzten Proben waren jedenfalls überaus erfolgreich, was nicht zuletzt an der großen Macht des Wundermittels Kaffee gelegen haben könnte. Ein weiser Mann sagte einst: "Vertraue niemandem, der keinen Kaffee trinkt, diese Menschen sind nicht ernst zu nehmen". Nun gut, ich würde ja sagen: Vertraue niemandem, der dir niemals widerspricht, denn, wenn du falsch liegst und man dir sagt deine Sicht wäre die richtige, dann...
 
-Richtig, das war eine Ellipse. Was haben wir also getan in letzter Zeit? gearbeitet! und noch mehr genau davon. Ein Ende ist nicht in Sicht, zumindest nicht für mich, kein Dunkel am Ende des Lichts!
+Richtig, das war eine Ellipse. Was haben wir also getan in letzter Zeit? gearbeitet! und noch mehr genau davon. Ein Ende ist nicht in Sicht, zumindest nicht für mich, kein Dunkel am Ende des Lichts! Wer Genaueres über unsere aktuellen Ereignisse erfahren will, sollte dringend in unserer Video-Section vorbeischauen.
 
    
 
