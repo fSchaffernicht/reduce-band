@@ -11,13 +11,13 @@ Eher sollte es noch gesteigert werden! Reduce ist das ES in uns; das, was wir li
 
 So viel zur Einleitung.
 
-Bald sind wir soweit endlich auf die Bühne zu können. In Kürze werden wir genug Songs haben, um einen kleinen Auftritt spielen zu können. Wie, wann, wo wir das tun werden ist noch gar nicht klar, aber dass es passieren wird ist wohl gewiss und so arbeiten wir Schritt für Schritt darauf hin endlich an dem, was wir am liebsten tun, auch andere teilhaben zu lassen.
+Bald sind wir soweit endlich auf die Bühne zu können. In Kürze werden wir genug Songs haben, um einen kleinen Auftritt spielen zu können. Wie, wann, wo wir das tun werden ist noch gar nicht klar, aber dass es passieren wird, ist wohl gewiss und so arbeiten wir Schritt für Schritt darauf hin endlich an dem, was wir am liebsten tun, auch andere teilhaben zu lassen.
 
 Unser neuer Song fühlt sich richtig gut an, und ich würde sogar sagen: er hat mehr Power, als alle anderen! Jetzt noch ein weiterer Song dazu und schon sind wir bereit für etliche kleine Gigs!
 
-Unsere letzten Proben waren jedenfalls überaus erfolgreich, was nicht zuletzt an der großen Macht des Wundermittels Kaffee gelegen haben könnte. Ein weiser Mann sagte einst: Vertraue niemandem, der keinen Kaffee trinkt, diese Menschen sind nicht ernst zu nehmen. Nun gut, ich würde ja sagen: Vertraue niemandem, der dir niemals widerspricht, denn, wenn du falsch liegst und man dir sagt deine Sicht wäre die richtige, dann...
+Unsere letzten Proben waren jedenfalls überaus erfolgreich, was nicht zuletzt an der großen Macht des Wundermittels Kaffee gelegen haben könnte. Ein weiser Mann sagte einst: "Vertraue niemandem, der keinen Kaffee trinkt, diese Menschen sind nicht ernst zu nehmen". Nun gut, ich würde ja sagen: Vertraue niemandem, der dir niemals widerspricht, denn, wenn du falsch liegst und man dir sagt deine Sicht wäre die richtige, dann...
 
-Richtig, das war eine Ellipse. Was haben wir also getan in letzter Zeit? gearbeitet! und noch mehr genau davon. Ein Ende ist nicht in Sicht, zumindest nicht für mich, kein Dunkel am Ende des Lichts!
+Richtig, das war eine Ellipse. Was haben wir also getan in letzter Zeit? gearbeitet! und noch mehr genau davon. Ein Ende ist nicht in Sicht, zumindest nicht für mich, kein Dunkel am Ende des Lichts! Wer Genaueres über unsere aktuellen Ereignisse erfahren will, sollte dringend in unserer Video-Section vorbeischauen.
 
    
 
