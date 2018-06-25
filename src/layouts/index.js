@@ -21,19 +21,19 @@ const navItems = [
     text: 'Home'
   },
   {
-    href: '/about',
+    href: '/about/',
     text: 'About'
   },
   {
-    href: '/videos',
+    href: '/videos/',
     text: 'Videos'
   },
   {
-    href: '/blog',
+    href: '/blog/',
     text: 'Blog'
   },
   {
-    href: '/contact',
+    href: '/contact/',
     text: 'Kontakt'
   }
 ]
