@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 
 export default styled.section`
-  padding: 8rem 0;
-  margin: 8rem 0;
+  padding: 6rem 0;
+  margin: 6rem 0;
   
   ${props => props.dark && css`
     background: ${props => props.theme.color.black};
