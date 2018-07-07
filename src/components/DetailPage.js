@@ -6,7 +6,7 @@ export default (props) => {
   } = props
 
   return (
-    <div className='detail-page'>
+    <div>
       {children}
     </div>
   )
